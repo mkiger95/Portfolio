@@ -1,0 +1,1437 @@
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE    1
+
+       1                    ;******************************************************************************
+       2                    ;* TI ARM C/C++ Codegen                                        PC v16.9.9.LTS *
+       3                    ;* Date/Time created: Sun Nov 25 16:40:46 2018                                *
+       4                    ;******************************************************************************
+       5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --embed
+       6 00000000                   .thumb
+       7                    
+       8                    $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                            .dwattr $C$DW$CU, DW_AT_name("../Application/MAC/HAL/target/hal_trng_wrapper.c")
+      10                            .dwattr $C$DW$CU, DW_AT_producer("TI TI ARM C/C++ Codegen PC v16.9.9.LTS Copyright (c) 1996-20
+      11                            .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                            .dwattr $C$DW$CU, DW_AT_comp_dir("C:\CCSWorkspace\ECG603\collector_cc1350lp\collector_cc1350lp
+      13                    
+      14                    $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                            .dwattr $C$DW$1, DW_AT_name("NOROM_TRNGConfigure")
+      16                            .dwattr $C$DW$1, DW_AT_TI_symbol_name("NOROM_TRNGConfigure")
+      17                            .dwattr $C$DW$1, DW_AT_declaration
+      18                            .dwattr $C$DW$1, DW_AT_external
+      19                            .dwattr $C$DW$1, DW_AT_decl_file("C:/ti/simplelink_cc13x0_sdk_2_30_00_20/source/ti/devices/cc1
+      20                            .dwattr $C$DW$1, DW_AT_decl_line(0x89)
+      21                            .dwattr $C$DW$1, DW_AT_decl_column(0x0d)
+      22                    $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      23                            .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$19)
+      24                    
+      25                    $C$DW$3 .dwtag  DW_TAG_formal_parameter
+      26                            .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$19)
+      27                    
+      28                    $C$DW$4 .dwtag  DW_TAG_formal_parameter
+      29                            .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$19)
+      30                    
+      31                            .dwendtag $C$DW$1
+      32                    
+      33 00000000                   .bss    lastTrngVal,4,4
+      34                    $C$DW$5 .dwtag  DW_TAG_variable
+      35                            .dwattr $C$DW$5, DW_AT_name("lastTrngVal")
+      36                            .dwattr $C$DW$5, DW_AT_TI_symbol_name("lastTrngVal")
+      37                            .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$95)
+      38                            .dwattr $C$DW$5, DW_AT_location[DW_OP_addr lastTrngVal]
+      39                            .dwattr $C$DW$5, DW_AT_decl_file("../Application/MAC/HAL/target/hal_trng_wrapper.c")
+      40                            .dwattr $C$DW$5, DW_AT_decl_line(0x50)
+      41                            .dwattr $C$DW$5, DW_AT_decl_column(0x0f)
+      42                    
+      43                    ;       C:\ti\ccsv7\tools\compiler\ti-cgt-arm_16.9.9.LTS\bin\armopt.exe C:/CCSWorkspace/ECG603/collect
+      44 00000000                   .sect   ".text:HalTRNG_WaitForReady"
+      45                            .clink
+      46                            .thumbfunc HalTRNG_WaitForReady
+      47 00000000                   .thumb
+      48                            .global HalTRNG_WaitForReady
+      49                    
+      50                    $C$DW$6 .dwtag  DW_TAG_subprogram
+      51                            .dwattr $C$DW$6, DW_AT_name("HalTRNG_WaitForReady")
+      52                            .dwattr $C$DW$6, DW_AT_low_pc(HalTRNG_WaitForReady)
+      53                            .dwattr $C$DW$6, DW_AT_high_pc(0x00)
+      54                            .dwattr $C$DW$6, DW_AT_TI_symbol_name("HalTRNG_WaitForReady")
+      55                            .dwattr $C$DW$6, DW_AT_external
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE    2
+
+      56                            .dwattr $C$DW$6, DW_AT_TI_begin_file("../Application/MAC/HAL/target/hal_trng_wrapper.c")
+      57                            .dwattr $C$DW$6, DW_AT_TI_begin_line(0x8f)
+      58                            .dwattr $C$DW$6, DW_AT_TI_begin_column(0x06)
+      59                            .dwattr $C$DW$6, DW_AT_decl_file("../Application/MAC/HAL/target/hal_trng_wrapper.c")
+      60                            .dwattr $C$DW$6, DW_AT_decl_line(0x8f)
+      61                            .dwattr $C$DW$6, DW_AT_decl_column(0x06)
+      62                            .dwattr $C$DW$6, DW_AT_TI_max_frame_size(0x00)
+      63                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 144,column 1,is_stmt,addr
+      64                    
+      65                            .dwfde $C$DW$CIE, HalTRNG_WaitForReady
+      66                    
+      67                    ;*****************************************************************************
+      68                    ;* FUNCTION NAME: HalTRNG_WaitForReady                                       *
+      69                    ;*                                                                           *
+      70                    ;*   Regs Modified     : A1,A2,SR                                            *
+      71                    ;*   Regs Used         : A1,A2,LR,SR                                         *
+      72                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+      73                    ;*****************************************************************************
+      74 00000000           HalTRNG_WaitForReady:
+      75                    ;* --------------------------------------------------------------------------*
+      76                    ;* A1    assigned to $O$R1
+      77                            .dwcfi  cfa_offset, 0
+      78                            .dwpsn  file "C:/ti/simplelink_cc13x0_sdk_2_30_00_20/source/ti/devices/cc13x0/driverlib/trng.h
+      79 00000000 4902              LDR       A2, $C$CON1           ; [DPU_3_PIPE] |209|  ; [ORIG 16-BIT INS]
+      80                    ;* --------------------------------------------------------------------------*
+      81                    ;*   BEGIN LOOP ||$C$L1||
+      82                    ;*
+      83                    ;*   Loop source line                : 147
+      84                    ;*   Loop closing brace source line  : 147
+      85                    ;*   Known Minimum Trip Count        : 1
+      86                    ;*   Known Maximum Trip Count        : 4294967295
+      87                    ;*   Known Max Trip Count Factor     : 1
+      88                    ;* --------------------------------------------------------------------------*
+      89 00000002           ||$C$L1||:    
+      90 00000002 6808              LDR       A1, [A2, #0]          ; [DPU_3_PIPE] |209|  ; [ORIG 16-BIT INS]
+      91                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 147,column 9,is_stmt,isa 
+      92 00000004 0840              LSRS      A1, A1, #1            ; [DPU_3_PIPE] |147|  ; [ORIG 16-BIT INS]
+      93 00000006 D3FC              BCC       ||$C$L1||             ; [DPU_3_PIPE] |147|  ; [ORIG 16-BIT INS]
+      94                            ; BRANCHCC OCCURS {||$C$L1||}    ; [] |147| 
+      95                    ;* --------------------------------------------------------------------------*
+      96                    $C$DW$7 .dwtag  DW_TAG_TI_branch
+      97                            .dwattr $C$DW$7, DW_AT_low_pc(0x00)
+      98                            .dwattr $C$DW$7, DW_AT_TI_return
+      99                    
+     100 00000008 4770              BX        LR                    ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     101                            ; BRANCH OCCURS                  ; [] 
+     102                            .dwattr $C$DW$6, DW_AT_TI_end_file("../Application/MAC/HAL/target/hal_trng_wrapper.c")
+     103                            .dwattr $C$DW$6, DW_AT_TI_end_line(0x97)
+     104                            .dwattr $C$DW$6, DW_AT_TI_end_column(0x01)
+     105                            .dwendentry
+     106                            .dwendtag $C$DW$6
+     107                    
+     108 00000000                   .sect   ".text:HalTRNG_InitTRNG"
+     109                            .clink
+     110                            .thumbfunc HalTRNG_InitTRNG
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE    3
+
+     111 00000000                   .thumb
+     112                            .global HalTRNG_InitTRNG
+     113                    
+     114                    $C$DW$8 .dwtag  DW_TAG_subprogram
+     115                            .dwattr $C$DW$8, DW_AT_name("HalTRNG_InitTRNG")
+     116                            .dwattr $C$DW$8, DW_AT_low_pc(HalTRNG_InitTRNG)
+     117                            .dwattr $C$DW$8, DW_AT_high_pc(0x00)
+     118                            .dwattr $C$DW$8, DW_AT_TI_symbol_name("HalTRNG_InitTRNG")
+     119                            .dwattr $C$DW$8, DW_AT_external
+     120                            .dwattr $C$DW$8, DW_AT_TI_begin_file("../Application/MAC/HAL/target/hal_trng_wrapper.c")
+     121                            .dwattr $C$DW$8, DW_AT_TI_begin_line(0x66)
+     122                            .dwattr $C$DW$8, DW_AT_TI_begin_column(0x06)
+     123                            .dwattr $C$DW$8, DW_AT_decl_file("../Application/MAC/HAL/target/hal_trng_wrapper.c")
+     124                            .dwattr $C$DW$8, DW_AT_decl_line(0x66)
+     125                            .dwattr $C$DW$8, DW_AT_decl_column(0x06)
+     126                            .dwattr $C$DW$8, DW_AT_TI_max_frame_size(0x08)
+     127                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 103,column 1,is_stmt,addr
+     128                    
+     129                            .dwfde $C$DW$CIE, HalTRNG_InitTRNG
+     130                    
+     131                    ;*****************************************************************************
+     132                    ;* FUNCTION NAME: HalTRNG_InitTRNG                                           *
+     133                    ;*                                                                           *
+     134                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     135                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     136                    ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+     137                    ;*****************************************************************************
+     138 00000000           HalTRNG_InitTRNG:
+     139                    ;* --------------------------------------------------------------------------*
+     140                            .dwcfi  cfa_offset, 0
+     141                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 114,column 3,is_stmt,isa 
+     142 00000000 7080F44F          MOV       A1, #256              ; [DPU_3_PIPE] |114|  ; [KEEP 32-BIT INS]
+     143 00000004 B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     144                            .dwcfi  cfa_offset, 8
+     145                            .dwcfi  save_reg_to_mem, 14, -4
+     146                            .dwcfi  save_reg_to_mem, 3, -8
+     147 00000006 2201              MOVS      A3, #1                ; [DPU_3_PIPE] |114|  ; [ORIG 16-BIT INS]
+     148 00000008 4601              MOV       A2, A1                ; [DPU_3_PIPE] |114|  ; [ORIG 16-BIT INS]
+     149                    $C$DW$9 .dwtag  DW_TAG_TI_branch
+     150                            .dwattr $C$DW$9, DW_AT_low_pc(0x00)
+     151                            .dwattr $C$DW$9, DW_AT_name("NOROM_TRNGConfigure")
+     152                            .dwattr $C$DW$9, DW_AT_TI_call
+     153                    
+     154 0000000a FFFEF7FF!         BL        NOROM_TRNGConfigure   ; [DPU_3_PIPE] |114|  ; [KEEP 32-BIT INS]
+     155                            ; CALL OCCURS {NOROM_TRNGConfigure }  ; [] |114| 
+     156                            .dwpsn  file "C:/ti/simplelink_cc13x0_sdk_2_30_00_20/source/ti/devices/cc13x0/driverlib/trng.h
+     157 0000000e 4903              LDR       A2, $C$CON2           ; [DPU_3_PIPE] |154|  ; [ORIG 16-BIT INS]
+     158 00000010 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |154|  ; [ORIG 16-BIT INS]
+     159 00000012 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |154|  ; [ORIG 16-BIT INS]
+     160                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 120,column 3,is_stmt,isa 
+     161 00000014 4902              LDR       A2, $C$CON3           ; [DPU_3_PIPE] |120|  ; [ORIG 16-BIT INS]
+     162 00000016 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |120|  ; [ORIG 16-BIT INS]
+     163 00000018 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |120|  ; [ORIG 16-BIT INS]
+     164                    $C$DW$10        .dwtag  DW_TAG_TI_branch
+     165                            .dwattr $C$DW$10, DW_AT_low_pc(0x00)
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE    4
+
+     166                            .dwattr $C$DW$10, DW_AT_TI_return
+     167                    
+     168 0000001a BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     169                            .dwcfi  cfa_offset, 0
+     170                            .dwcfi  restore_reg, 3
+     171                            ; BRANCH OCCURS                  ; [] 
+     172                            .dwattr $C$DW$8, DW_AT_TI_end_file("../Application/MAC/HAL/target/hal_trng_wrapper.c")
+     173                            .dwattr $C$DW$8, DW_AT_TI_end_line(0x7d)
+     174                            .dwattr $C$DW$8, DW_AT_TI_end_column(0x01)
+     175                            .dwendentry
+     176                            .dwendtag $C$DW$8
+     177                    
+     178 00000000                   .sect   ".text:HalTRNG_GetTRNG"
+     179                            .clink
+     180                            .thumbfunc HalTRNG_GetTRNG
+     181 00000000                   .thumb
+     182                            .global HalTRNG_GetTRNG
+     183                    
+     184                    $C$DW$11        .dwtag  DW_TAG_subprogram
+     185                            .dwattr $C$DW$11, DW_AT_name("HalTRNG_GetTRNG")
+     186                            .dwattr $C$DW$11, DW_AT_low_pc(HalTRNG_GetTRNG)
+     187                            .dwattr $C$DW$11, DW_AT_high_pc(0x00)
+     188                            .dwattr $C$DW$11, DW_AT_TI_symbol_name("HalTRNG_GetTRNG")
+     189                            .dwattr $C$DW$11, DW_AT_external
+     190                            .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$95)
+     191                            .dwattr $C$DW$11, DW_AT_TI_begin_file("../Application/MAC/HAL/target/hal_trng_wrapper.c")
+     192                            .dwattr $C$DW$11, DW_AT_TI_begin_line(0xa9)
+     193                            .dwattr $C$DW$11, DW_AT_TI_begin_column(0x08)
+     194                            .dwattr $C$DW$11, DW_AT_decl_file("../Application/MAC/HAL/target/hal_trng_wrapper.c")
+     195                            .dwattr $C$DW$11, DW_AT_decl_line(0xa9)
+     196                            .dwattr $C$DW$11, DW_AT_decl_column(0x08)
+     197                            .dwattr $C$DW$11, DW_AT_TI_max_frame_size(0x08)
+     198                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 170,column 1,is_stmt,addr
+     199                    
+     200                            .dwfde $C$DW$CIE, HalTRNG_GetTRNG
+     201                    
+     202                    ;*****************************************************************************
+     203                    ;* FUNCTION NAME: HalTRNG_GetTRNG                                            *
+     204                    ;*                                                                           *
+     205                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     206                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     207                    ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+     208                    ;*****************************************************************************
+     209                    HalTRNG_GetTRNG:
+     210                    ;* --------------------------------------------------------------------------*
+     211                    ;* A2    assigned to $O$C17
+     212                    ;* A2    assigned to $O$K30
+     213                    ;* A1    assigned to $O$R1
+     214                    ;* A1    assigned to trngVal
+     215                    $C$DW$12        .dwtag  DW_TAG_variable
+     216                            .dwattr $C$DW$12, DW_AT_name("trngVal")
+     217                            .dwattr $C$DW$12, DW_AT_TI_symbol_name("trngVal")
+     218                            .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$95)
+     219                            .dwattr $C$DW$12, DW_AT_location[DW_OP_reg0]
+     220                    
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE    5
+
+     221                            .dwcfi  cfa_offset, 0
+     222                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 180,column 3,is_stmt,isa 
+     223 00000000 480E              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |180|  ; [ORIG 16-BIT INS]
+     224 00000002 B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     225                            .dwcfi  cfa_offset, 8
+     226                            .dwcfi  save_reg_to_mem, 14, -4
+     227                            .dwcfi  save_reg_to_mem, 3, -8
+     228 00000004 300C              ADDS      A1, A1, #12           ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     229 00000006 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |180|  ; [ORIG 16-BIT INS]
+     230 00000008 0AC0              LSRS      A1, A1, #11           ; [DPU_3_PIPE] |180|  ; [ORIG 16-BIT INS]
+     231 0000000a D201              BCS       ||$C$L2||             ; [DPU_3_PIPE] |180|  ; [ORIG 16-BIT INS]
+     232                            ; BRANCHCC OCCURS {||$C$L2||}    ; [] |180| 
+     233                    ;* --------------------------------------------------------------------------*
+     234                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 182,column 5,is_stmt,isa 
+     235                    $C$DW$13        .dwtag  DW_TAG_TI_branch
+     236                            .dwattr $C$DW$13, DW_AT_low_pc(0x00)
+     237                            .dwattr $C$DW$13, DW_AT_name("HalTRNG_InitTRNG")
+     238                            .dwattr $C$DW$13, DW_AT_TI_call
+     239                    
+     240 0000000c FFFEF7FF!         BL        HalTRNG_InitTRNG      ; [DPU_3_PIPE] |182|  ; [KEEP 32-BIT INS]
+     241                            ; CALL OCCURS {HalTRNG_InitTRNG }  ; [] |182| 
+     242                    ;* --------------------------------------------------------------------------*
+     243 00000010           ||$C$L2||:    
+     244                            .dwpsn  file "C:/ti/simplelink_cc13x0_sdk_2_30_00_20/source/ti/devices/cc13x0/driverlib/trng.h
+     245 00000010 4907              LDR       A2, $C$CON5           ; [DPU_3_PIPE] |209|  ; [ORIG 16-BIT INS]
+     246                    ;* --------------------------------------------------------------------------*
+     247                    ;*   BEGIN LOOP ||$C$L3||
+     248                    ;*
+     249                    ;*   Loop source line                : 186
+     250                    ;*   Loop closing brace source line  : 186
+     251                    ;*   Known Minimum Trip Count        : 1
+     252                    ;*   Known Maximum Trip Count        : 4294967295
+     253                    ;*   Known Max Trip Count Factor     : 1
+     254                    ;* --------------------------------------------------------------------------*
+     255 00000012           ||$C$L3||:    
+     256 00000012 6808              LDR       A1, [A2, #0]          ; [DPU_3_PIPE] |209|  ; [ORIG 16-BIT INS]
+     257                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 186,column 9,is_stmt,isa 
+     258 00000014 0840              LSRS      A1, A1, #1            ; [DPU_3_PIPE] |186|  ; [ORIG 16-BIT INS]
+     259 00000016 D3FC              BCC       ||$C$L3||             ; [DPU_3_PIPE] |186|  ; [ORIG 16-BIT INS]
+     260                            ; BRANCHCC OCCURS {||$C$L3||}    ; [] |186| 
+     261                    ;* --------------------------------------------------------------------------*
+     262                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 189,column 3,is_stmt,isa 
+     263 00000018 4806              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |189|  ; [ORIG 16-BIT INS]
+     264 0000001a 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |189|  ; [ORIG 16-BIT INS]
+     265 0000001c 6841              LDR       A2, [A1, #4]          ; [DPU_3_PIPE] |189|  ; [ORIG 16-BIT INS]
+     266 0000001e 2002              MOVS      A1, #2                ; [DPU_3_PIPE] |189|  ; [ORIG 16-BIT INS]
+     267                    $C$DW$14        .dwtag  DW_TAG_TI_branch
+     268                            .dwattr $C$DW$14, DW_AT_low_pc(0x00)
+     269                            .dwattr $C$DW$14, DW_AT_TI_call
+     270                            .dwattr $C$DW$14, DW_AT_TI_indirect
+     271                    
+     272 00000020 4788              BLX       A2                    ; [DPU_3_PIPE] |189|  ; [ORIG 16-BIT INS]
+     273                            ; CALL OCCURS {}                 ; [] |189| 
+     274 00000022 4907              LDR       A2, $C$CON10          ; [DPU_3_PIPE] |189|  ; [ORIG 16-BIT INS]
+     275 00000024 680A              LDR       A3, [A2, #0]          ; [DPU_3_PIPE] |189|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE    6
+
+     276 00000026 4282              CMP       A3, A1                ; [DPU_3_PIPE] |189|  ; [ORIG 16-BIT INS]
+     277 00000028 BF0C              ITE       EQ                    ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     278                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 191,column 5,is_stmt,isa 
+     279 0000002a 4803              LDREQ     A1, $C$CON8           ; [DPU_3_PIPE] |191|  ; [ORIG 16-BIT INS]
+     280                            .dwpsn  file "../Application/MAC/HAL/target/hal_trng_wrapper.c",line 196,column 5,is_stmt,isa 
+     281 0000002c 6008              STRNE     A1, [A2, #0]          ; [DPU_3_PIPE] |196|  ; [ORIG 16-BIT INS]
+     282                    $C$DW$15        .dwtag  DW_TAG_TI_branch
+     283                            .dwattr $C$DW$15, DW_AT_low_pc(0x00)
+     284                            .dwattr $C$DW$15, DW_AT_TI_return
+     285                    
+     286 0000002e BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     287                            .dwcfi  cfa_offset, 0
+     288                            .dwcfi  restore_reg, 3
+     289                            ; BRANCH OCCURS                  ; [] 
+     290                            .dwattr $C$DW$11, DW_AT_TI_end_file("../Application/MAC/HAL/target/hal_trng_wrapper.c")
+     291                            .dwattr $C$DW$11, DW_AT_TI_end_line(0xca)
+     292                            .dwattr $C$DW$11, DW_AT_TI_end_column(0x01)
+     293                            .dwendentry
+     294                            .dwendtag $C$DW$11
+     295                    
+     296                    ;******************************************************************************
+     297                    ;* CONSTANT TABLE                                                             *
+     298                    ;******************************************************************************
+     299 0000000a                   .sect   ".text:HalTRNG_WaitForReady"
+     300                            .align  4
+     301 0000000a 800846C0  ||$C$CON1||:    .bits   1073905672,32
+         0000000e 00004002 
+     302                    ;******************************************************************************
+     303                    ;* CONSTANT TABLE                                                             *
+     304                    ;******************************************************************************
+     305 0000001c                   .sect   ".text:HalTRNG_InitTRNG"
+     306                            .align  4
+     307 0000001c 425002A8  ||$C$CON2||:    .bits   1112539816,32
+     308                            .align  4
+     309 00000020 00000000! ||$C$CON3||:    .bits   lastTrngVal,32
+     310                    ;******************************************************************************
+     311                    ;* CONSTANT TABLE                                                             *
+     312                    ;******************************************************************************
+     313 00000030                   .sect   ".text:HalTRNG_GetTRNG"
+     314                            .align  4
+     315 00000030 40028008  ||$C$CON5||:    .bits   1073905672,32
+     316                            .align  4
+     317 00000034 100001CC  ||$C$CON6||:    .bits   268435916,32
+     318                            .align  4
+     319 00000038 DEADBEEF  ||$C$CON8||:    .bits   -559038737,32
+     320                            .align  4
+     321 0000003c 40028008  ||$C$CON9||:    .bits   1073905672,32
+     322                            .align  4
+     323 00000040 00000000! ||$C$CON10||:   .bits   lastTrngVal,32
+     324                    ;*****************************************************************************
+     325                    ;* UNDEFINED EXTERNAL REFERENCES                                             *
+     326                    ;*****************************************************************************
+     327                            .global NOROM_TRNGConfigure
+     328                    
+     329                    ;******************************************************************************
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE    7
+
+     330                    ;* BUILD ATTRIBUTES                                                           *
+     331                    ;******************************************************************************
+     332                            .battr "aeabi", Tag_File, 1, Tag_ABI_PCS_wchar_t(2)
+     333                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_rounding(0)
+     334                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_denormal(0)
+     335                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_exceptions(0)
+     336                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_number_model(1)
+     337                            .battr "aeabi", Tag_File, 1, Tag_ABI_enum_size(0)
+     338                            .battr "aeabi", Tag_File, 1, Tag_ABI_optimization_goals(0)
+     339                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_optimization_goals(0)
+     340                            .battr "TI", Tag_File, 1, Tag_Bitfield_layout(2)
+     341                            .battr "aeabi", Tag_File, 1, Tag_ABI_VFP_args(3)
+     342                            .battr "TI", Tag_File, 1, Tag_FP_interface(1)
+     343                    
+     344                    ;******************************************************************************
+     345                    ;* TYPE INFORMATION                                                           *
+     346                    ;******************************************************************************
+     347                    
+     348                    $C$DW$T$60      .dwtag  DW_TAG_structure_type
+     349                            .dwattr $C$DW$T$60, DW_AT_byte_size(0x4c)
+     350                    $C$DW$16        .dwtag  DW_TAG_member
+     351                            .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$24)
+     352                            .dwattr $C$DW$16, DW_AT_name("Crc32")
+     353                            .dwattr $C$DW$16, DW_AT_TI_symbol_name("Crc32")
+     354                            .dwattr $C$DW$16, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     355                            .dwattr $C$DW$16, DW_AT_accessibility(DW_ACCESS_public)
+     356                            .dwattr $C$DW$16, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     357                            .dwattr $C$DW$16, DW_AT_decl_line(0x76)
+     358                            .dwattr $C$DW$16, DW_AT_decl_column(0x25)
+     359                    
+     360                    $C$DW$17        .dwtag  DW_TAG_member
+     361                            .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$27)
+     362                            .dwattr $C$DW$17, DW_AT_name("FlashGetSize")
+     363                            .dwattr $C$DW$17, DW_AT_TI_symbol_name("FlashGetSize")
+     364                            .dwattr $C$DW$17, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+     365                            .dwattr $C$DW$17, DW_AT_accessibility(DW_ACCESS_public)
+     366                            .dwattr $C$DW$17, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     367                            .dwattr $C$DW$17, DW_AT_decl_line(0x77)
+     368                            .dwattr $C$DW$17, DW_AT_decl_column(0x25)
+     369                    
+     370                    $C$DW$18        .dwtag  DW_TAG_member
+     371                            .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$28)
+     372                            .dwattr $C$DW$18, DW_AT_name("GetChipId")
+     373                            .dwattr $C$DW$18, DW_AT_TI_symbol_name("GetChipId")
+     374                            .dwattr $C$DW$18, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+     375                            .dwattr $C$DW$18, DW_AT_accessibility(DW_ACCESS_public)
+     376                            .dwattr $C$DW$18, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     377                            .dwattr $C$DW$18, DW_AT_decl_line(0x78)
+     378                            .dwattr $C$DW$18, DW_AT_decl_column(0x25)
+     379                    
+     380                    $C$DW$19        .dwtag  DW_TAG_member
+     381                            .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$31)
+     382                            .dwattr $C$DW$19, DW_AT_name("ReservedLocation1")
+     383                            .dwattr $C$DW$19, DW_AT_TI_symbol_name("ReservedLocation1")
+     384                            .dwattr $C$DW$19, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE    8
+
+     385                            .dwattr $C$DW$19, DW_AT_accessibility(DW_ACCESS_public)
+     386                            .dwattr $C$DW$19, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     387                            .dwattr $C$DW$19, DW_AT_decl_line(0x79)
+     388                            .dwattr $C$DW$19, DW_AT_decl_column(0x25)
+     389                    
+     390                    $C$DW$20        .dwtag  DW_TAG_member
+     391                            .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$32)
+     392                            .dwattr $C$DW$20, DW_AT_name("ReservedLocation2")
+     393                            .dwattr $C$DW$20, DW_AT_TI_symbol_name("ReservedLocation2")
+     394                            .dwattr $C$DW$20, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+     395                            .dwattr $C$DW$20, DW_AT_accessibility(DW_ACCESS_public)
+     396                            .dwattr $C$DW$20, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     397                            .dwattr $C$DW$20, DW_AT_decl_line(0x7a)
+     398                            .dwattr $C$DW$20, DW_AT_decl_column(0x25)
+     399                    
+     400                    $C$DW$21        .dwtag  DW_TAG_member
+     401                            .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$33)
+     402                            .dwattr $C$DW$21, DW_AT_name("ReservedLocation3")
+     403                            .dwattr $C$DW$21, DW_AT_TI_symbol_name("ReservedLocation3")
+     404                            .dwattr $C$DW$21, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+     405                            .dwattr $C$DW$21, DW_AT_accessibility(DW_ACCESS_public)
+     406                            .dwattr $C$DW$21, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     407                            .dwattr $C$DW$21, DW_AT_decl_line(0x7b)
+     408                            .dwattr $C$DW$21, DW_AT_decl_column(0x25)
+     409                    
+     410                    $C$DW$22        .dwtag  DW_TAG_member
+     411                            .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$36)
+     412                            .dwattr $C$DW$22, DW_AT_name("ResetDevice")
+     413                            .dwattr $C$DW$22, DW_AT_TI_symbol_name("ResetDevice")
+     414                            .dwattr $C$DW$22, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+     415                            .dwattr $C$DW$22, DW_AT_accessibility(DW_ACCESS_public)
+     416                            .dwattr $C$DW$22, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     417                            .dwattr $C$DW$22, DW_AT_decl_line(0x7c)
+     418                            .dwattr $C$DW$22, DW_AT_decl_column(0x25)
+     419                    
+     420                    $C$DW$23        .dwtag  DW_TAG_member
+     421                            .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$41)
+     422                            .dwattr $C$DW$23, DW_AT_name("Fletcher32")
+     423                            .dwattr $C$DW$23, DW_AT_TI_symbol_name("Fletcher32")
+     424                            .dwattr $C$DW$23, DW_AT_data_member_location[DW_OP_plus_uconst 0x1c]
+     425                            .dwattr $C$DW$23, DW_AT_accessibility(DW_ACCESS_public)
+     426                            .dwattr $C$DW$23, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     427                            .dwattr $C$DW$23, DW_AT_decl_line(0x7d)
+     428                            .dwattr $C$DW$23, DW_AT_decl_column(0x25)
+     429                    
+     430                    $C$DW$24        .dwtag  DW_TAG_member
+     431                            .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$45)
+     432                            .dwattr $C$DW$24, DW_AT_name("MinValue")
+     433                            .dwattr $C$DW$24, DW_AT_TI_symbol_name("MinValue")
+     434                            .dwattr $C$DW$24, DW_AT_data_member_location[DW_OP_plus_uconst 0x20]
+     435                            .dwattr $C$DW$24, DW_AT_accessibility(DW_ACCESS_public)
+     436                            .dwattr $C$DW$24, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     437                            .dwattr $C$DW$24, DW_AT_decl_line(0x7e)
+     438                            .dwattr $C$DW$24, DW_AT_decl_column(0x25)
+     439                    
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE    9
+
+     440                    $C$DW$25        .dwtag  DW_TAG_member
+     441                            .dwattr $C$DW$25, DW_AT_type(*$C$DW$T$46)
+     442                            .dwattr $C$DW$25, DW_AT_name("MaxValue")
+     443                            .dwattr $C$DW$25, DW_AT_TI_symbol_name("MaxValue")
+     444                            .dwattr $C$DW$25, DW_AT_data_member_location[DW_OP_plus_uconst 0x24]
+     445                            .dwattr $C$DW$25, DW_AT_accessibility(DW_ACCESS_public)
+     446                            .dwattr $C$DW$25, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     447                            .dwattr $C$DW$25, DW_AT_decl_line(0x7f)
+     448                            .dwattr $C$DW$25, DW_AT_decl_column(0x25)
+     449                    
+     450                    $C$DW$26        .dwtag  DW_TAG_member
+     451                            .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$47)
+     452                            .dwattr $C$DW$26, DW_AT_name("MeanValue")
+     453                            .dwattr $C$DW$26, DW_AT_TI_symbol_name("MeanValue")
+     454                            .dwattr $C$DW$26, DW_AT_data_member_location[DW_OP_plus_uconst 0x28]
+     455                            .dwattr $C$DW$26, DW_AT_accessibility(DW_ACCESS_public)
+     456                            .dwattr $C$DW$26, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     457                            .dwattr $C$DW$26, DW_AT_decl_line(0x80)
+     458                            .dwattr $C$DW$26, DW_AT_decl_column(0x25)
+     459                    
+     460                    $C$DW$27        .dwtag  DW_TAG_member
+     461                            .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$48)
+     462                            .dwattr $C$DW$27, DW_AT_name("StandDeviationValue")
+     463                            .dwattr $C$DW$27, DW_AT_TI_symbol_name("StandDeviationValue")
+     464                            .dwattr $C$DW$27, DW_AT_data_member_location[DW_OP_plus_uconst 0x2c]
+     465                            .dwattr $C$DW$27, DW_AT_accessibility(DW_ACCESS_public)
+     466                            .dwattr $C$DW$27, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     467                            .dwattr $C$DW$27, DW_AT_decl_line(0x81)
+     468                            .dwattr $C$DW$27, DW_AT_decl_column(0x25)
+     469                    
+     470                    $C$DW$28        .dwtag  DW_TAG_member
+     471                            .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$51)
+     472                            .dwattr $C$DW$28, DW_AT_name("ReservedLocation4")
+     473                            .dwattr $C$DW$28, DW_AT_TI_symbol_name("ReservedLocation4")
+     474                            .dwattr $C$DW$28, DW_AT_data_member_location[DW_OP_plus_uconst 0x30]
+     475                            .dwattr $C$DW$28, DW_AT_accessibility(DW_ACCESS_public)
+     476                            .dwattr $C$DW$28, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     477                            .dwattr $C$DW$28, DW_AT_decl_line(0x82)
+     478                            .dwattr $C$DW$28, DW_AT_decl_column(0x25)
+     479                    
+     480                    $C$DW$29        .dwtag  DW_TAG_member
+     481                            .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$52)
+     482                            .dwattr $C$DW$29, DW_AT_name("ReservedLocation5")
+     483                            .dwattr $C$DW$29, DW_AT_TI_symbol_name("ReservedLocation5")
+     484                            .dwattr $C$DW$29, DW_AT_data_member_location[DW_OP_plus_uconst 0x34]
+     485                            .dwattr $C$DW$29, DW_AT_accessibility(DW_ACCESS_public)
+     486                            .dwattr $C$DW$29, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     487                            .dwattr $C$DW$29, DW_AT_decl_line(0x83)
+     488                            .dwattr $C$DW$29, DW_AT_decl_column(0x25)
+     489                    
+     490                    $C$DW$30        .dwtag  DW_TAG_member
+     491                            .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$53)
+     492                            .dwattr $C$DW$30, DW_AT_name("HFSourceSafeSwitch")
+     493                            .dwattr $C$DW$30, DW_AT_TI_symbol_name("HFSourceSafeSwitch")
+     494                            .dwattr $C$DW$30, DW_AT_data_member_location[DW_OP_plus_uconst 0x38]
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   10
+
+     495                            .dwattr $C$DW$30, DW_AT_accessibility(DW_ACCESS_public)
+     496                            .dwattr $C$DW$30, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     497                            .dwattr $C$DW$30, DW_AT_decl_line(0x84)
+     498                            .dwattr $C$DW$30, DW_AT_decl_column(0x25)
+     499                    
+     500                    $C$DW$31        .dwtag  DW_TAG_member
+     501                            .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$56)
+     502                            .dwattr $C$DW$31, DW_AT_name("SelectCompAInput")
+     503                            .dwattr $C$DW$31, DW_AT_TI_symbol_name("SelectCompAInput")
+     504                            .dwattr $C$DW$31, DW_AT_data_member_location[DW_OP_plus_uconst 0x3c]
+     505                            .dwattr $C$DW$31, DW_AT_accessibility(DW_ACCESS_public)
+     506                            .dwattr $C$DW$31, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     507                            .dwattr $C$DW$31, DW_AT_decl_line(0x85)
+     508                            .dwattr $C$DW$31, DW_AT_decl_column(0x25)
+     509                    
+     510                    $C$DW$32        .dwtag  DW_TAG_member
+     511                            .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$57)
+     512                            .dwattr $C$DW$32, DW_AT_name("SelectCompARef")
+     513                            .dwattr $C$DW$32, DW_AT_TI_symbol_name("SelectCompARef")
+     514                            .dwattr $C$DW$32, DW_AT_data_member_location[DW_OP_plus_uconst 0x40]
+     515                            .dwattr $C$DW$32, DW_AT_accessibility(DW_ACCESS_public)
+     516                            .dwattr $C$DW$32, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     517                            .dwattr $C$DW$32, DW_AT_decl_line(0x86)
+     518                            .dwattr $C$DW$32, DW_AT_decl_column(0x25)
+     519                    
+     520                    $C$DW$33        .dwtag  DW_TAG_member
+     521                            .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$58)
+     522                            .dwattr $C$DW$33, DW_AT_name("SelectADCCompBInput")
+     523                            .dwattr $C$DW$33, DW_AT_TI_symbol_name("SelectADCCompBInput")
+     524                            .dwattr $C$DW$33, DW_AT_data_member_location[DW_OP_plus_uconst 0x44]
+     525                            .dwattr $C$DW$33, DW_AT_accessibility(DW_ACCESS_public)
+     526                            .dwattr $C$DW$33, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     527                            .dwattr $C$DW$33, DW_AT_decl_line(0x87)
+     528                            .dwattr $C$DW$33, DW_AT_decl_column(0x25)
+     529                    
+     530                    $C$DW$34        .dwtag  DW_TAG_member
+     531                            .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$59)
+     532                            .dwattr $C$DW$34, DW_AT_name("SelectCompBRef")
+     533                            .dwattr $C$DW$34, DW_AT_TI_symbol_name("SelectCompBRef")
+     534                            .dwattr $C$DW$34, DW_AT_data_member_location[DW_OP_plus_uconst 0x48]
+     535                            .dwattr $C$DW$34, DW_AT_accessibility(DW_ACCESS_public)
+     536                            .dwattr $C$DW$34, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\cc
+     537                            .dwattr $C$DW$34, DW_AT_decl_line(0x88)
+     538                            .dwattr $C$DW$34, DW_AT_decl_column(0x25)
+     539                    
+     540                            .dwattr $C$DW$T$60, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     541                            .dwattr $C$DW$T$60, DW_AT_decl_line(0x75)
+     542                            .dwattr $C$DW$T$60, DW_AT_decl_column(0x01)
+     543                            .dwendtag $C$DW$T$60
+     544                    
+     545                    $C$DW$T$61      .dwtag  DW_TAG_typedef
+     546                            .dwattr $C$DW$T$61, DW_AT_name("HARD_API_T")
+     547                            .dwattr $C$DW$T$61, DW_AT_type(*$C$DW$T$60)
+     548                            .dwattr $C$DW$T$61, DW_AT_language(DW_LANG_C)
+     549                            .dwattr $C$DW$T$61, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   11
+
+     550                            .dwattr $C$DW$T$61, DW_AT_decl_line(0x89)
+     551                            .dwattr $C$DW$T$61, DW_AT_decl_column(0x03)
+     552                    
+     553                    $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     554                            .dwattr $C$DW$T$2, DW_AT_name("void")
+     555                    
+     556                    
+     557                    $C$DW$T$34      .dwtag  DW_TAG_subroutine_type
+     558                            .dwattr $C$DW$T$34, DW_AT_language(DW_LANG_C)
+     559                            .dwendtag $C$DW$T$34
+     560                    
+     561                    $C$DW$T$35      .dwtag  DW_TAG_pointer_type
+     562                            .dwattr $C$DW$T$35, DW_AT_type(*$C$DW$T$34)
+     563                            .dwattr $C$DW$T$35, DW_AT_address_class(0x20)
+     564                    
+     565                    $C$DW$T$53      .dwtag  DW_TAG_typedef
+     566                            .dwattr $C$DW$T$53, DW_AT_name("FPTR_HFSOURCESAFESWITCH_T")
+     567                            .dwattr $C$DW$T$53, DW_AT_type(*$C$DW$T$35)
+     568                            .dwattr $C$DW$T$53, DW_AT_language(DW_LANG_C)
+     569                            .dwattr $C$DW$T$53, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     570                            .dwattr $C$DW$T$53, DW_AT_decl_line(0x5f)
+     571                            .dwattr $C$DW$T$53, DW_AT_decl_column(0x19)
+     572                    
+     573                    $C$DW$T$36      .dwtag  DW_TAG_typedef
+     574                            .dwattr $C$DW$T$36, DW_AT_name("FPTR_RESETDEV_T")
+     575                            .dwattr $C$DW$T$36, DW_AT_type(*$C$DW$T$35)
+     576                            .dwattr $C$DW$T$36, DW_AT_language(DW_LANG_C)
+     577                            .dwattr $C$DW$T$36, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     578                            .dwattr $C$DW$T$36, DW_AT_decl_line(0x4d)
+     579                            .dwattr $C$DW$T$36, DW_AT_decl_column(0x19)
+     580                    
+     581                    $C$DW$T$62      .dwtag  DW_TAG_typedef
+     582                            .dwattr $C$DW$T$62, DW_AT_name("FPTR_VOID_VOID_T")
+     583                            .dwattr $C$DW$T$62, DW_AT_type(*$C$DW$T$35)
+     584                            .dwattr $C$DW$T$62, DW_AT_language(DW_LANG_C)
+     585                            .dwattr $C$DW$T$62, DW_AT_decl_file("C:/ti/simplelink_cc13x0_sdk_2_30_00_20/source/ti/devices/
+     586                            .dwattr $C$DW$T$62, DW_AT_decl_line(0x33)
+     587                            .dwattr $C$DW$T$62, DW_AT_decl_column(0x11)
+     588                    
+     589                    
+     590                    $C$DW$T$49      .dwtag  DW_TAG_subroutine_type
+     591                            .dwattr $C$DW$T$49, DW_AT_language(DW_LANG_C)
+     592                    $C$DW$35        .dwtag  DW_TAG_formal_parameter
+     593                            .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$19)
+     594                    
+     595                            .dwendtag $C$DW$T$49
+     596                    
+     597                    $C$DW$T$50      .dwtag  DW_TAG_pointer_type
+     598                            .dwattr $C$DW$T$50, DW_AT_type(*$C$DW$T$49)
+     599                            .dwattr $C$DW$T$50, DW_AT_address_class(0x20)
+     600                    
+     601                    $C$DW$T$51      .dwtag  DW_TAG_typedef
+     602                            .dwattr $C$DW$T$51, DW_AT_name("FPTR_RESERVED4_T")
+     603                            .dwattr $C$DW$T$51, DW_AT_type(*$C$DW$T$50)
+     604                            .dwattr $C$DW$T$51, DW_AT_language(DW_LANG_C)
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   12
+
+     605                            .dwattr $C$DW$T$51, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     606                            .dwattr $C$DW$T$51, DW_AT_decl_line(0x61)
+     607                            .dwattr $C$DW$T$51, DW_AT_decl_column(0x19)
+     608                    
+     609                    $C$DW$T$52      .dwtag  DW_TAG_typedef
+     610                            .dwattr $C$DW$T$52, DW_AT_name("FPTR_RESERVED5_T")
+     611                            .dwattr $C$DW$T$52, DW_AT_type(*$C$DW$T$50)
+     612                            .dwattr $C$DW$T$52, DW_AT_language(DW_LANG_C)
+     613                            .dwattr $C$DW$T$52, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     614                            .dwattr $C$DW$T$52, DW_AT_decl_line(0x63)
+     615                            .dwattr $C$DW$T$52, DW_AT_decl_column(0x19)
+     616                    
+     617                    
+     618                    $C$DW$T$54      .dwtag  DW_TAG_subroutine_type
+     619                            .dwattr $C$DW$T$54, DW_AT_language(DW_LANG_C)
+     620                    $C$DW$36        .dwtag  DW_TAG_formal_parameter
+     621                            .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$20)
+     622                    
+     623                            .dwendtag $C$DW$T$54
+     624                    
+     625                    $C$DW$T$55      .dwtag  DW_TAG_pointer_type
+     626                            .dwattr $C$DW$T$55, DW_AT_type(*$C$DW$T$54)
+     627                            .dwattr $C$DW$T$55, DW_AT_address_class(0x20)
+     628                    
+     629                    $C$DW$T$58      .dwtag  DW_TAG_typedef
+     630                            .dwattr $C$DW$T$58, DW_AT_name("FPTR_ADCCOMPBIN_T")
+     631                            .dwattr $C$DW$T$58, DW_AT_type(*$C$DW$T$55)
+     632                            .dwattr $C$DW$T$58, DW_AT_language(DW_LANG_C)
+     633                            .dwattr $C$DW$T$58, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     634                            .dwattr $C$DW$T$58, DW_AT_decl_line(0x69)
+     635                            .dwattr $C$DW$T$58, DW_AT_decl_column(0x19)
+     636                    
+     637                    $C$DW$T$56      .dwtag  DW_TAG_typedef
+     638                            .dwattr $C$DW$T$56, DW_AT_name("FPTR_COMPAIN_T")
+     639                            .dwattr $C$DW$T$56, DW_AT_type(*$C$DW$T$55)
+     640                            .dwattr $C$DW$T$56, DW_AT_language(DW_LANG_C)
+     641                            .dwattr $C$DW$T$56, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     642                            .dwattr $C$DW$T$56, DW_AT_decl_line(0x65)
+     643                            .dwattr $C$DW$T$56, DW_AT_decl_column(0x19)
+     644                    
+     645                    $C$DW$T$57      .dwtag  DW_TAG_typedef
+     646                            .dwattr $C$DW$T$57, DW_AT_name("FPTR_COMPAREF_T")
+     647                            .dwattr $C$DW$T$57, DW_AT_type(*$C$DW$T$55)
+     648                            .dwattr $C$DW$T$57, DW_AT_language(DW_LANG_C)
+     649                            .dwattr $C$DW$T$57, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     650                            .dwattr $C$DW$T$57, DW_AT_decl_line(0x67)
+     651                            .dwattr $C$DW$T$57, DW_AT_decl_column(0x19)
+     652                    
+     653                    $C$DW$T$59      .dwtag  DW_TAG_typedef
+     654                            .dwattr $C$DW$T$59, DW_AT_name("FPTR_COMPBREF_T")
+     655                            .dwattr $C$DW$T$59, DW_AT_type(*$C$DW$T$55)
+     656                            .dwattr $C$DW$T$59, DW_AT_language(DW_LANG_C)
+     657                            .dwattr $C$DW$T$59, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     658                            .dwattr $C$DW$T$59, DW_AT_decl_line(0x6b)
+     659                            .dwattr $C$DW$T$59, DW_AT_decl_column(0x19)
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   13
+
+     660                    
+     661                    $C$DW$T$63      .dwtag  DW_TAG_typedef
+     662                            .dwattr $C$DW$T$63, DW_AT_name("FPTR_VOID_UINT8_T")
+     663                            .dwattr $C$DW$T$63, DW_AT_type(*$C$DW$T$55)
+     664                            .dwattr $C$DW$T$63, DW_AT_language(DW_LANG_C)
+     665                            .dwattr $C$DW$T$63, DW_AT_decl_file("C:/ti/simplelink_cc13x0_sdk_2_30_00_20/source/ti/devices/
+     666                            .dwattr $C$DW$T$63, DW_AT_decl_line(0x34)
+     667                            .dwattr $C$DW$T$63, DW_AT_decl_column(0x11)
+     668                    
+     669                    $C$DW$T$4       .dwtag  DW_TAG_base_type
+     670                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     671                            .dwattr $C$DW$T$4, DW_AT_name("bool")
+     672                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     673                    
+     674                    $C$DW$T$5       .dwtag  DW_TAG_base_type
+     675                            .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     676                            .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     677                            .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     678                    
+     679                    $C$DW$T$66      .dwtag  DW_TAG_typedef
+     680                            .dwattr $C$DW$T$66, DW_AT_name("int8")
+     681                            .dwattr $C$DW$T$66, DW_AT_type(*$C$DW$T$5)
+     682                            .dwattr $C$DW$T$66, DW_AT_language(DW_LANG_C)
+     683                            .dwattr $C$DW$T$66, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\ti154sta
+     684                            .dwattr $C$DW$T$66, DW_AT_decl_line(0x38)
+     685                            .dwattr $C$DW$T$66, DW_AT_decl_column(0x19)
+     686                    
+     687                    $C$DW$T$67      .dwtag  DW_TAG_typedef
+     688                            .dwattr $C$DW$T$67, DW_AT_name("int8_t")
+     689                            .dwattr $C$DW$T$67, DW_AT_type(*$C$DW$T$5)
+     690                            .dwattr $C$DW$T$67, DW_AT_language(DW_LANG_C)
+     691                            .dwattr $C$DW$T$67, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     692                            .dwattr $C$DW$T$67, DW_AT_decl_line(0x2a)
+     693                            .dwattr $C$DW$T$67, DW_AT_decl_column(0x1d)
+     694                    
+     695                    $C$DW$T$68      .dwtag  DW_TAG_typedef
+     696                            .dwattr $C$DW$T$68, DW_AT_name("int_least8_t")
+     697                            .dwattr $C$DW$T$68, DW_AT_type(*$C$DW$T$67)
+     698                            .dwattr $C$DW$T$68, DW_AT_language(DW_LANG_C)
+     699                            .dwattr $C$DW$T$68, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     700                            .dwattr $C$DW$T$68, DW_AT_decl_line(0x37)
+     701                            .dwattr $C$DW$T$68, DW_AT_decl_column(0x17)
+     702                    
+     703                    $C$DW$T$6       .dwtag  DW_TAG_base_type
+     704                            .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     705                            .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     706                            .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     707                    
+     708                    $C$DW$T$69      .dwtag  DW_TAG_typedef
+     709                            .dwattr $C$DW$T$69, DW_AT_name("uint8")
+     710                            .dwattr $C$DW$T$69, DW_AT_type(*$C$DW$T$6)
+     711                            .dwattr $C$DW$T$69, DW_AT_language(DW_LANG_C)
+     712                            .dwattr $C$DW$T$69, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\ti154sta
+     713                            .dwattr $C$DW$T$69, DW_AT_decl_line(0x39)
+     714                            .dwattr $C$DW$T$69, DW_AT_decl_column(0x19)
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   14
+
+     715                    
+     716                    $C$DW$T$20      .dwtag  DW_TAG_typedef
+     717                            .dwattr $C$DW$T$20, DW_AT_name("uint8_t")
+     718                            .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$6)
+     719                            .dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
+     720                            .dwattr $C$DW$T$20, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     721                            .dwattr $C$DW$T$20, DW_AT_decl_line(0x2b)
+     722                            .dwattr $C$DW$T$20, DW_AT_decl_column(0x1c)
+     723                    
+     724                    $C$DW$T$21      .dwtag  DW_TAG_pointer_type
+     725                            .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$20)
+     726                            .dwattr $C$DW$T$21, DW_AT_address_class(0x20)
+     727                    
+     728                    $C$DW$T$70      .dwtag  DW_TAG_typedef
+     729                            .dwattr $C$DW$T$70, DW_AT_name("uint_least8_t")
+     730                            .dwattr $C$DW$T$70, DW_AT_type(*$C$DW$T$20)
+     731                            .dwattr $C$DW$T$70, DW_AT_language(DW_LANG_C)
+     732                            .dwattr $C$DW$T$70, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     733                            .dwattr $C$DW$T$70, DW_AT_decl_line(0x38)
+     734                            .dwattr $C$DW$T$70, DW_AT_decl_column(0x16)
+     735                    
+     736                    $C$DW$T$7       .dwtag  DW_TAG_base_type
+     737                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     738                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     739                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+     740                    
+     741                    $C$DW$T$8       .dwtag  DW_TAG_base_type
+     742                            .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     743                            .dwattr $C$DW$T$8, DW_AT_name("short")
+     744                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+     745                    
+     746                    $C$DW$T$71      .dwtag  DW_TAG_typedef
+     747                            .dwattr $C$DW$T$71, DW_AT_name("int16")
+     748                            .dwattr $C$DW$T$71, DW_AT_type(*$C$DW$T$8)
+     749                            .dwattr $C$DW$T$71, DW_AT_language(DW_LANG_C)
+     750                            .dwattr $C$DW$T$71, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\ti154sta
+     751                            .dwattr $C$DW$T$71, DW_AT_decl_line(0x3b)
+     752                            .dwattr $C$DW$T$71, DW_AT_decl_column(0x19)
+     753                    
+     754                    $C$DW$T$72      .dwtag  DW_TAG_typedef
+     755                            .dwattr $C$DW$T$72, DW_AT_name("int16_t")
+     756                            .dwattr $C$DW$T$72, DW_AT_type(*$C$DW$T$8)
+     757                            .dwattr $C$DW$T$72, DW_AT_language(DW_LANG_C)
+     758                            .dwattr $C$DW$T$72, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     759                            .dwattr $C$DW$T$72, DW_AT_decl_line(0x2c)
+     760                            .dwattr $C$DW$T$72, DW_AT_decl_column(0x1d)
+     761                    
+     762                    $C$DW$T$73      .dwtag  DW_TAG_typedef
+     763                            .dwattr $C$DW$T$73, DW_AT_name("int_least16_t")
+     764                            .dwattr $C$DW$T$73, DW_AT_type(*$C$DW$T$72)
+     765                            .dwattr $C$DW$T$73, DW_AT_language(DW_LANG_C)
+     766                            .dwattr $C$DW$T$73, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     767                            .dwattr $C$DW$T$73, DW_AT_decl_line(0x3a)
+     768                            .dwattr $C$DW$T$73, DW_AT_decl_column(0x17)
+     769                    
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   15
+
+     770                    $C$DW$T$9       .dwtag  DW_TAG_base_type
+     771                            .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     772                            .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     773                            .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+     774                    
+     775                    $C$DW$T$74      .dwtag  DW_TAG_typedef
+     776                            .dwattr $C$DW$T$74, DW_AT_name("uint16")
+     777                            .dwattr $C$DW$T$74, DW_AT_type(*$C$DW$T$9)
+     778                            .dwattr $C$DW$T$74, DW_AT_language(DW_LANG_C)
+     779                            .dwattr $C$DW$T$74, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\ti154sta
+     780                            .dwattr $C$DW$T$74, DW_AT_decl_line(0x3c)
+     781                            .dwattr $C$DW$T$74, DW_AT_decl_column(0x19)
+     782                    
+     783                    $C$DW$T$37      .dwtag  DW_TAG_typedef
+     784                            .dwattr $C$DW$T$37, DW_AT_name("uint16_t")
+     785                            .dwattr $C$DW$T$37, DW_AT_type(*$C$DW$T$9)
+     786                            .dwattr $C$DW$T$37, DW_AT_language(DW_LANG_C)
+     787                            .dwattr $C$DW$T$37, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     788                            .dwattr $C$DW$T$37, DW_AT_decl_line(0x2d)
+     789                            .dwattr $C$DW$T$37, DW_AT_decl_column(0x1c)
+     790                    
+     791                    $C$DW$T$38      .dwtag  DW_TAG_pointer_type
+     792                            .dwattr $C$DW$T$38, DW_AT_type(*$C$DW$T$37)
+     793                            .dwattr $C$DW$T$38, DW_AT_address_class(0x20)
+     794                    
+     795                    $C$DW$T$75      .dwtag  DW_TAG_typedef
+     796                            .dwattr $C$DW$T$75, DW_AT_name("uint_least16_t")
+     797                            .dwattr $C$DW$T$75, DW_AT_type(*$C$DW$T$37)
+     798                            .dwattr $C$DW$T$75, DW_AT_language(DW_LANG_C)
+     799                            .dwattr $C$DW$T$75, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     800                            .dwattr $C$DW$T$75, DW_AT_decl_line(0x3b)
+     801                            .dwattr $C$DW$T$75, DW_AT_decl_column(0x16)
+     802                    
+     803                    $C$DW$T$10      .dwtag  DW_TAG_base_type
+     804                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     805                            .dwattr $C$DW$T$10, DW_AT_name("int")
+     806                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
+     807                    
+     808                    $C$DW$T$76      .dwtag  DW_TAG_typedef
+     809                            .dwattr $C$DW$T$76, DW_AT_name("int32_t")
+     810                            .dwattr $C$DW$T$76, DW_AT_type(*$C$DW$T$10)
+     811                            .dwattr $C$DW$T$76, DW_AT_language(DW_LANG_C)
+     812                            .dwattr $C$DW$T$76, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     813                            .dwattr $C$DW$T$76, DW_AT_decl_line(0x2e)
+     814                            .dwattr $C$DW$T$76, DW_AT_decl_column(0x1d)
+     815                    
+     816                    $C$DW$T$77      .dwtag  DW_TAG_typedef
+     817                            .dwattr $C$DW$T$77, DW_AT_name("int_fast16_t")
+     818                            .dwattr $C$DW$T$77, DW_AT_type(*$C$DW$T$76)
+     819                            .dwattr $C$DW$T$77, DW_AT_language(DW_LANG_C)
+     820                            .dwattr $C$DW$T$77, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     821                            .dwattr $C$DW$T$77, DW_AT_decl_line(0x47)
+     822                            .dwattr $C$DW$T$77, DW_AT_decl_column(0x17)
+     823                    
+     824                    $C$DW$T$78      .dwtag  DW_TAG_typedef
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   16
+
+     825                            .dwattr $C$DW$T$78, DW_AT_name("int_fast32_t")
+     826                            .dwattr $C$DW$T$78, DW_AT_type(*$C$DW$T$76)
+     827                            .dwattr $C$DW$T$78, DW_AT_language(DW_LANG_C)
+     828                            .dwattr $C$DW$T$78, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     829                            .dwattr $C$DW$T$78, DW_AT_decl_line(0x4a)
+     830                            .dwattr $C$DW$T$78, DW_AT_decl_column(0x17)
+     831                    
+     832                    $C$DW$T$79      .dwtag  DW_TAG_typedef
+     833                            .dwattr $C$DW$T$79, DW_AT_name("int_fast8_t")
+     834                            .dwattr $C$DW$T$79, DW_AT_type(*$C$DW$T$76)
+     835                            .dwattr $C$DW$T$79, DW_AT_language(DW_LANG_C)
+     836                            .dwattr $C$DW$T$79, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     837                            .dwattr $C$DW$T$79, DW_AT_decl_line(0x45)
+     838                            .dwattr $C$DW$T$79, DW_AT_decl_column(0x17)
+     839                    
+     840                    $C$DW$T$80      .dwtag  DW_TAG_typedef
+     841                            .dwattr $C$DW$T$80, DW_AT_name("int_least32_t")
+     842                            .dwattr $C$DW$T$80, DW_AT_type(*$C$DW$T$76)
+     843                            .dwattr $C$DW$T$80, DW_AT_language(DW_LANG_C)
+     844                            .dwattr $C$DW$T$80, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     845                            .dwattr $C$DW$T$80, DW_AT_decl_line(0x3c)
+     846                            .dwattr $C$DW$T$80, DW_AT_decl_column(0x17)
+     847                    
+     848                    $C$DW$T$81      .dwtag  DW_TAG_typedef
+     849                            .dwattr $C$DW$T$81, DW_AT_name("intptr_t")
+     850                            .dwattr $C$DW$T$81, DW_AT_type(*$C$DW$T$10)
+     851                            .dwattr $C$DW$T$81, DW_AT_language(DW_LANG_C)
+     852                            .dwattr $C$DW$T$81, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     853                            .dwattr $C$DW$T$81, DW_AT_decl_line(0x52)
+     854                            .dwattr $C$DW$T$81, DW_AT_decl_column(0x1a)
+     855                    
+     856                    $C$DW$T$11      .dwtag  DW_TAG_base_type
+     857                            .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     858                            .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     859                            .dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
+     860                    
+     861                    $C$DW$T$82      .dwtag  DW_TAG_typedef
+     862                            .dwattr $C$DW$T$82, DW_AT_name("__UINT32")
+     863                            .dwattr $C$DW$T$82, DW_AT_type(*$C$DW$T$11)
+     864                            .dwattr $C$DW$T$82, DW_AT_language(DW_LANG_C)
+     865                            .dwattr $C$DW$T$82, DW_AT_decl_file("C:/ti/simplelink_cc13x0_sdk_2_30_00_20/source/ti/devices/
+     866                            .dwattr $C$DW$T$82, DW_AT_decl_line(0x45)
+     867                            .dwattr $C$DW$T$82, DW_AT_decl_column(0x17)
+     868                    
+     869                    $C$DW$T$19      .dwtag  DW_TAG_typedef
+     870                            .dwattr $C$DW$T$19, DW_AT_name("uint32_t")
+     871                            .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$11)
+     872                            .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+     873                            .dwattr $C$DW$T$19, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+     874                            .dwattr $C$DW$T$19, DW_AT_decl_line(0x2f)
+     875                            .dwattr $C$DW$T$19, DW_AT_decl_column(0x1c)
+     876                    
+     877                    
+     878                    $C$DW$T$22      .dwtag  DW_TAG_subroutine_type
+     879                            .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$19)
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   17
+
+     880                            .dwattr $C$DW$T$22, DW_AT_language(DW_LANG_C)
+     881                    $C$DW$37        .dwtag  DW_TAG_formal_parameter
+     882                            .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$21)
+     883                    
+     884                    $C$DW$38        .dwtag  DW_TAG_formal_parameter
+     885                            .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$19)
+     886                    
+     887                    $C$DW$39        .dwtag  DW_TAG_formal_parameter
+     888                            .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$19)
+     889                    
+     890                            .dwendtag $C$DW$T$22
+     891                    
+     892                    $C$DW$T$23      .dwtag  DW_TAG_pointer_type
+     893                            .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$22)
+     894                            .dwattr $C$DW$T$23, DW_AT_address_class(0x20)
+     895                    
+     896                    $C$DW$T$24      .dwtag  DW_TAG_typedef
+     897                            .dwattr $C$DW$T$24, DW_AT_name("FPTR_CRC32_T")
+     898                            .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$23)
+     899                            .dwattr $C$DW$T$24, DW_AT_language(DW_LANG_C)
+     900                            .dwattr $C$DW$T$24, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     901                            .dwattr $C$DW$T$24, DW_AT_decl_line(0x3e)
+     902                            .dwattr $C$DW$T$24, DW_AT_decl_column(0x19)
+     903                    
+     904                    $C$DW$T$33      .dwtag  DW_TAG_typedef
+     905                            .dwattr $C$DW$T$33, DW_AT_name("FPTR_RESERVED3_T")
+     906                            .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$T$23)
+     907                            .dwattr $C$DW$T$33, DW_AT_language(DW_LANG_C)
+     908                            .dwattr $C$DW$T$33, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     909                            .dwattr $C$DW$T$33, DW_AT_decl_line(0x4a)
+     910                            .dwattr $C$DW$T$33, DW_AT_decl_column(0x19)
+     911                    
+     912                    
+     913                    $C$DW$T$25      .dwtag  DW_TAG_subroutine_type
+     914                            .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$19)
+     915                            .dwattr $C$DW$T$25, DW_AT_language(DW_LANG_C)
+     916                            .dwendtag $C$DW$T$25
+     917                    
+     918                    $C$DW$T$26      .dwtag  DW_TAG_pointer_type
+     919                            .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$25)
+     920                            .dwattr $C$DW$T$26, DW_AT_address_class(0x20)
+     921                    
+     922                    $C$DW$T$28      .dwtag  DW_TAG_typedef
+     923                            .dwattr $C$DW$T$28, DW_AT_name("FPTR_GETCHIPID_T")
+     924                            .dwattr $C$DW$T$28, DW_AT_type(*$C$DW$T$26)
+     925                            .dwattr $C$DW$T$28, DW_AT_language(DW_LANG_C)
+     926                            .dwattr $C$DW$T$28, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     927                            .dwattr $C$DW$T$28, DW_AT_decl_line(0x44)
+     928                            .dwattr $C$DW$T$28, DW_AT_decl_column(0x19)
+     929                    
+     930                    $C$DW$T$27      .dwtag  DW_TAG_typedef
+     931                            .dwattr $C$DW$T$27, DW_AT_name("FPTR_GETFLSIZE_T")
+     932                            .dwattr $C$DW$T$27, DW_AT_type(*$C$DW$T$26)
+     933                            .dwattr $C$DW$T$27, DW_AT_language(DW_LANG_C)
+     934                            .dwattr $C$DW$T$27, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   18
+
+     935                            .dwattr $C$DW$T$27, DW_AT_decl_line(0x42)
+     936                            .dwattr $C$DW$T$27, DW_AT_decl_column(0x19)
+     937                    
+     938                    $C$DW$T$32      .dwtag  DW_TAG_typedef
+     939                            .dwattr $C$DW$T$32, DW_AT_name("FPTR_RESERVED2_T")
+     940                            .dwattr $C$DW$T$32, DW_AT_type(*$C$DW$T$26)
+     941                            .dwattr $C$DW$T$32, DW_AT_language(DW_LANG_C)
+     942                            .dwattr $C$DW$T$32, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     943                            .dwattr $C$DW$T$32, DW_AT_decl_line(0x48)
+     944                            .dwattr $C$DW$T$32, DW_AT_decl_column(0x19)
+     945                    
+     946                    
+     947                    $C$DW$T$29      .dwtag  DW_TAG_subroutine_type
+     948                            .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$19)
+     949                            .dwattr $C$DW$T$29, DW_AT_language(DW_LANG_C)
+     950                    $C$DW$40        .dwtag  DW_TAG_formal_parameter
+     951                            .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$19)
+     952                    
+     953                            .dwendtag $C$DW$T$29
+     954                    
+     955                    $C$DW$T$30      .dwtag  DW_TAG_pointer_type
+     956                            .dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$29)
+     957                            .dwattr $C$DW$T$30, DW_AT_address_class(0x20)
+     958                    
+     959                    $C$DW$T$31      .dwtag  DW_TAG_typedef
+     960                            .dwattr $C$DW$T$31, DW_AT_name("FPTR_RESERVED1_T")
+     961                            .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$30)
+     962                            .dwattr $C$DW$T$31, DW_AT_language(DW_LANG_C)
+     963                            .dwattr $C$DW$T$31, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     964                            .dwattr $C$DW$T$31, DW_AT_decl_line(0x46)
+     965                            .dwattr $C$DW$T$31, DW_AT_decl_column(0x19)
+     966                    
+     967                    
+     968                    $C$DW$T$39      .dwtag  DW_TAG_subroutine_type
+     969                            .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$T$19)
+     970                            .dwattr $C$DW$T$39, DW_AT_language(DW_LANG_C)
+     971                    $C$DW$41        .dwtag  DW_TAG_formal_parameter
+     972                            .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$38)
+     973                    
+     974                    $C$DW$42        .dwtag  DW_TAG_formal_parameter
+     975                            .dwattr $C$DW$42, DW_AT_type(*$C$DW$T$37)
+     976                    
+     977                    $C$DW$43        .dwtag  DW_TAG_formal_parameter
+     978                            .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$37)
+     979                    
+     980                            .dwendtag $C$DW$T$39
+     981                    
+     982                    $C$DW$T$40      .dwtag  DW_TAG_pointer_type
+     983                            .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$39)
+     984                            .dwattr $C$DW$T$40, DW_AT_address_class(0x20)
+     985                    
+     986                    $C$DW$T$41      .dwtag  DW_TAG_typedef
+     987                            .dwattr $C$DW$T$41, DW_AT_name("FPTR_FLETCHER32_T")
+     988                            .dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$40)
+     989                            .dwattr $C$DW$T$41, DW_AT_language(DW_LANG_C)
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   19
+
+     990                            .dwattr $C$DW$T$41, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+     991                            .dwattr $C$DW$T$41, DW_AT_decl_line(0x4f)
+     992                            .dwattr $C$DW$T$41, DW_AT_decl_column(0x19)
+     993                    
+     994                    $C$DW$T$42      .dwtag  DW_TAG_pointer_type
+     995                            .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$19)
+     996                            .dwattr $C$DW$T$42, DW_AT_address_class(0x20)
+     997                    
+     998                    
+     999                    $C$DW$T$43      .dwtag  DW_TAG_subroutine_type
+    1000                            .dwattr $C$DW$T$43, DW_AT_type(*$C$DW$T$19)
+    1001                            .dwattr $C$DW$T$43, DW_AT_language(DW_LANG_C)
+    1002                    $C$DW$44        .dwtag  DW_TAG_formal_parameter
+    1003                            .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$42)
+    1004                    
+    1005                    $C$DW$45        .dwtag  DW_TAG_formal_parameter
+    1006                            .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$19)
+    1007                    
+    1008                            .dwendtag $C$DW$T$43
+    1009                    
+    1010                    $C$DW$T$44      .dwtag  DW_TAG_pointer_type
+    1011                            .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$43)
+    1012                            .dwattr $C$DW$T$44, DW_AT_address_class(0x20)
+    1013                    
+    1014                    $C$DW$T$46      .dwtag  DW_TAG_typedef
+    1015                            .dwattr $C$DW$T$46, DW_AT_name("FPTR_MAXVAL_T")
+    1016                            .dwattr $C$DW$T$46, DW_AT_type(*$C$DW$T$44)
+    1017                            .dwattr $C$DW$T$46, DW_AT_language(DW_LANG_C)
+    1018                            .dwattr $C$DW$T$46, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+    1019                            .dwattr $C$DW$T$46, DW_AT_decl_line(0x56)
+    1020                            .dwattr $C$DW$T$46, DW_AT_decl_column(0x19)
+    1021                    
+    1022                    $C$DW$T$47      .dwtag  DW_TAG_typedef
+    1023                            .dwattr $C$DW$T$47, DW_AT_name("FPTR_MEANVAL_T")
+    1024                            .dwattr $C$DW$T$47, DW_AT_type(*$C$DW$T$44)
+    1025                            .dwattr $C$DW$T$47, DW_AT_language(DW_LANG_C)
+    1026                            .dwattr $C$DW$T$47, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+    1027                            .dwattr $C$DW$T$47, DW_AT_decl_line(0x59)
+    1028                            .dwattr $C$DW$T$47, DW_AT_decl_column(0x19)
+    1029                    
+    1030                    $C$DW$T$45      .dwtag  DW_TAG_typedef
+    1031                            .dwattr $C$DW$T$45, DW_AT_name("FPTR_MINVAL_T")
+    1032                            .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$44)
+    1033                            .dwattr $C$DW$T$45, DW_AT_language(DW_LANG_C)
+    1034                            .dwattr $C$DW$T$45, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+    1035                            .dwattr $C$DW$T$45, DW_AT_decl_line(0x53)
+    1036                            .dwattr $C$DW$T$45, DW_AT_decl_column(0x19)
+    1037                    
+    1038                    $C$DW$T$48      .dwtag  DW_TAG_typedef
+    1039                            .dwattr $C$DW$T$48, DW_AT_name("FPTR_STDDVAL_T")
+    1040                            .dwattr $C$DW$T$48, DW_AT_type(*$C$DW$T$44)
+    1041                            .dwattr $C$DW$T$48, DW_AT_language(DW_LANG_C)
+    1042                            .dwattr $C$DW$T$48, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\devices\
+    1043                            .dwattr $C$DW$T$48, DW_AT_decl_line(0x5c)
+    1044                            .dwattr $C$DW$T$48, DW_AT_decl_column(0x19)
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   20
+
+    1045                    
+    1046                    $C$DW$T$89      .dwtag  DW_TAG_typedef
+    1047                            .dwattr $C$DW$T$89, DW_AT_name("uint_fast16_t")
+    1048                            .dwattr $C$DW$T$89, DW_AT_type(*$C$DW$T$19)
+    1049                            .dwattr $C$DW$T$89, DW_AT_language(DW_LANG_C)
+    1050                            .dwattr $C$DW$T$89, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+    1051                            .dwattr $C$DW$T$89, DW_AT_decl_line(0x48)
+    1052                            .dwattr $C$DW$T$89, DW_AT_decl_column(0x16)
+    1053                    
+    1054                    $C$DW$T$90      .dwtag  DW_TAG_typedef
+    1055                            .dwattr $C$DW$T$90, DW_AT_name("uint_fast32_t")
+    1056                            .dwattr $C$DW$T$90, DW_AT_type(*$C$DW$T$19)
+    1057                            .dwattr $C$DW$T$90, DW_AT_language(DW_LANG_C)
+    1058                            .dwattr $C$DW$T$90, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+    1059                            .dwattr $C$DW$T$90, DW_AT_decl_line(0x4b)
+    1060                            .dwattr $C$DW$T$90, DW_AT_decl_column(0x16)
+    1061                    
+    1062                    $C$DW$T$91      .dwtag  DW_TAG_typedef
+    1063                            .dwattr $C$DW$T$91, DW_AT_name("uint_fast8_t")
+    1064                            .dwattr $C$DW$T$91, DW_AT_type(*$C$DW$T$19)
+    1065                            .dwattr $C$DW$T$91, DW_AT_language(DW_LANG_C)
+    1066                            .dwattr $C$DW$T$91, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+    1067                            .dwattr $C$DW$T$91, DW_AT_decl_line(0x46)
+    1068                            .dwattr $C$DW$T$91, DW_AT_decl_column(0x16)
+    1069                    
+    1070                    $C$DW$T$92      .dwtag  DW_TAG_typedef
+    1071                            .dwattr $C$DW$T$92, DW_AT_name("uint_least32_t")
+    1072                            .dwattr $C$DW$T$92, DW_AT_type(*$C$DW$T$19)
+    1073                            .dwattr $C$DW$T$92, DW_AT_language(DW_LANG_C)
+    1074                            .dwattr $C$DW$T$92, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+    1075                            .dwattr $C$DW$T$92, DW_AT_decl_line(0x3d)
+    1076                            .dwattr $C$DW$T$92, DW_AT_decl_column(0x16)
+    1077                    
+    1078                    $C$DW$T$93      .dwtag  DW_TAG_typedef
+    1079                            .dwattr $C$DW$T$93, DW_AT_name("uintptr_t")
+    1080                            .dwattr $C$DW$T$93, DW_AT_type(*$C$DW$T$11)
+    1081                            .dwattr $C$DW$T$93, DW_AT_language(DW_LANG_C)
+    1082                            .dwattr $C$DW$T$93, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+    1083                            .dwattr $C$DW$T$93, DW_AT_decl_line(0x53)
+    1084                            .dwattr $C$DW$T$93, DW_AT_decl_column(0x1a)
+    1085                    
+    1086                    $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1087                            .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1088                            .dwattr $C$DW$T$12, DW_AT_name("long")
+    1089                            .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+    1090                    
+    1091                    $C$DW$T$94      .dwtag  DW_TAG_typedef
+    1092                            .dwattr $C$DW$T$94, DW_AT_name("int32")
+    1093                            .dwattr $C$DW$T$94, DW_AT_type(*$C$DW$T$12)
+    1094                            .dwattr $C$DW$T$94, DW_AT_language(DW_LANG_C)
+    1095                            .dwattr $C$DW$T$94, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\ti154sta
+    1096                            .dwattr $C$DW$T$94, DW_AT_decl_line(0x3e)
+    1097                            .dwattr $C$DW$T$94, DW_AT_decl_column(0x19)
+    1098                    
+    1099                    $C$DW$T$13      .dwtag  DW_TAG_base_type
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   21
+
+    1100                            .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1101                            .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1102                            .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+    1103                    
+    1104                    $C$DW$T$95      .dwtag  DW_TAG_typedef
+    1105                            .dwattr $C$DW$T$95, DW_AT_name("uint32")
+    1106                            .dwattr $C$DW$T$95, DW_AT_type(*$C$DW$T$13)
+    1107                            .dwattr $C$DW$T$95, DW_AT_language(DW_LANG_C)
+    1108                            .dwattr $C$DW$T$95, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\ti154sta
+    1109                            .dwattr $C$DW$T$95, DW_AT_decl_line(0x3f)
+    1110                            .dwattr $C$DW$T$95, DW_AT_decl_column(0x19)
+    1111                    
+    1112                    $C$DW$T$97      .dwtag  DW_TAG_typedef
+    1113                            .dwattr $C$DW$T$97, DW_AT_name("halDataAlign_t")
+    1114                            .dwattr $C$DW$T$97, DW_AT_type(*$C$DW$T$95)
+    1115                            .dwattr $C$DW$T$97, DW_AT_language(DW_LANG_C)
+    1116                            .dwattr $C$DW$T$97, DW_AT_decl_file("C:\ti\simplelink_cc13x0_sdk_2_30_00_20\source\ti\ti154sta
+    1117                            .dwattr $C$DW$T$97, DW_AT_decl_line(0x43)
+    1118                            .dwattr $C$DW$T$97, DW_AT_decl_column(0x19)
+    1119                    
+    1120                    $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1121                            .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1122                            .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1123                            .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+    1124                    
+    1125                    $C$DW$T$98      .dwtag  DW_TAG_typedef
+    1126                            .dwattr $C$DW$T$98, DW_AT_name("int64_t")
+    1127                            .dwattr $C$DW$T$98, DW_AT_type(*$C$DW$T$14)
+    1128                            .dwattr $C$DW$T$98, DW_AT_language(DW_LANG_C)
+    1129                            .dwattr $C$DW$T$98, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+    1130                            .dwattr $C$DW$T$98, DW_AT_decl_line(0x32)
+    1131                            .dwattr $C$DW$T$98, DW_AT_decl_column(0x21)
+    1132                    
+    1133                    $C$DW$T$99      .dwtag  DW_TAG_typedef
+    1134                            .dwattr $C$DW$T$99, DW_AT_name("int_fast64_t")
+    1135                            .dwattr $C$DW$T$99, DW_AT_type(*$C$DW$T$98)
+    1136                            .dwattr $C$DW$T$99, DW_AT_language(DW_LANG_C)
+    1137                            .dwattr $C$DW$T$99, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include/
+    1138                            .dwattr $C$DW$T$99, DW_AT_decl_line(0x4e)
+    1139                            .dwattr $C$DW$T$99, DW_AT_decl_column(0x17)
+    1140                    
+    1141                    $C$DW$T$100     .dwtag  DW_TAG_typedef
+    1142                            .dwattr $C$DW$T$100, DW_AT_name("int_least64_t")
+    1143                            .dwattr $C$DW$T$100, DW_AT_type(*$C$DW$T$98)
+    1144                            .dwattr $C$DW$T$100, DW_AT_language(DW_LANG_C)
+    1145                            .dwattr $C$DW$T$100, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include
+    1146                            .dwattr $C$DW$T$100, DW_AT_decl_line(0x40)
+    1147                            .dwattr $C$DW$T$100, DW_AT_decl_column(0x17)
+    1148                    
+    1149                    $C$DW$T$101     .dwtag  DW_TAG_typedef
+    1150                            .dwattr $C$DW$T$101, DW_AT_name("intmax_t")
+    1151                            .dwattr $C$DW$T$101, DW_AT_type(*$C$DW$T$14)
+    1152                            .dwattr $C$DW$T$101, DW_AT_language(DW_LANG_C)
+    1153                            .dwattr $C$DW$T$101, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include
+    1154                            .dwattr $C$DW$T$101, DW_AT_decl_line(0x56)
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   22
+
+    1155                            .dwattr $C$DW$T$101, DW_AT_decl_column(0x20)
+    1156                    
+    1157                    $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1158                            .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1159                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1160                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+    1161                    
+    1162                    $C$DW$T$102     .dwtag  DW_TAG_typedef
+    1163                            .dwattr $C$DW$T$102, DW_AT_name("uint64_t")
+    1164                            .dwattr $C$DW$T$102, DW_AT_type(*$C$DW$T$15)
+    1165                            .dwattr $C$DW$T$102, DW_AT_language(DW_LANG_C)
+    1166                            .dwattr $C$DW$T$102, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include
+    1167                            .dwattr $C$DW$T$102, DW_AT_decl_line(0x33)
+    1168                            .dwattr $C$DW$T$102, DW_AT_decl_column(0x20)
+    1169                    
+    1170                    $C$DW$T$103     .dwtag  DW_TAG_typedef
+    1171                            .dwattr $C$DW$T$103, DW_AT_name("uint_fast64_t")
+    1172                            .dwattr $C$DW$T$103, DW_AT_type(*$C$DW$T$102)
+    1173                            .dwattr $C$DW$T$103, DW_AT_language(DW_LANG_C)
+    1174                            .dwattr $C$DW$T$103, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include
+    1175                            .dwattr $C$DW$T$103, DW_AT_decl_line(0x4f)
+    1176                            .dwattr $C$DW$T$103, DW_AT_decl_column(0x16)
+    1177                    
+    1178                    $C$DW$T$104     .dwtag  DW_TAG_typedef
+    1179                            .dwattr $C$DW$T$104, DW_AT_name("uint_least64_t")
+    1180                            .dwattr $C$DW$T$104, DW_AT_type(*$C$DW$T$102)
+    1181                            .dwattr $C$DW$T$104, DW_AT_language(DW_LANG_C)
+    1182                            .dwattr $C$DW$T$104, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include
+    1183                            .dwattr $C$DW$T$104, DW_AT_decl_line(0x41)
+    1184                            .dwattr $C$DW$T$104, DW_AT_decl_column(0x16)
+    1185                    
+    1186                    $C$DW$T$105     .dwtag  DW_TAG_typedef
+    1187                            .dwattr $C$DW$T$105, DW_AT_name("uintmax_t")
+    1188                            .dwattr $C$DW$T$105, DW_AT_type(*$C$DW$T$15)
+    1189                            .dwattr $C$DW$T$105, DW_AT_language(DW_LANG_C)
+    1190                            .dwattr $C$DW$T$105, DW_AT_decl_file("C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.9.LTS/include
+    1191                            .dwattr $C$DW$T$105, DW_AT_decl_line(0x57)
+    1192                            .dwattr $C$DW$T$105, DW_AT_decl_column(0x20)
+    1193                    
+    1194                    $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1195                            .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1196                            .dwattr $C$DW$T$16, DW_AT_name("float")
+    1197                            .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+    1198                    
+    1199                    $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1200                            .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1201                            .dwattr $C$DW$T$17, DW_AT_name("double")
+    1202                            .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+    1203                    
+    1204                    $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1205                            .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1206                            .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1207                            .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+    1208                    
+    1209                            .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   23
+
+    1210                    
+    1211                    ;***************************************************************
+    1212                    ;* DWARF CIE ENTRIES                                           *
+    1213                    ;***************************************************************
+    1214                    
+    1215                    $C$DW$CIE       .dwcie 14
+    1216                            .dwcfi  cfa_register, 13
+    1217                            .dwcfi  cfa_offset, 0
+    1218                            .dwcfi  same_value, 4
+    1219                            .dwcfi  same_value, 5
+    1220                            .dwcfi  same_value, 6
+    1221                            .dwcfi  same_value, 7
+    1222                            .dwcfi  same_value, 8
+    1223                            .dwcfi  same_value, 9
+    1224                            .dwcfi  same_value, 10
+    1225                            .dwcfi  same_value, 11
+    1226                            .dwendentry
+    1227                    
+    1228                    ;***************************************************************
+    1229                    ;* DWARF REGISTER MAP                                          *
+    1230                    ;***************************************************************
+    1231                    
+    1232                    $C$DW$46        .dwtag  DW_TAG_TI_assign_register
+    1233                            .dwattr $C$DW$46, DW_AT_name("A1")
+    1234                            .dwattr $C$DW$46, DW_AT_location[DW_OP_reg0]
+    1235                    
+    1236                    $C$DW$47        .dwtag  DW_TAG_TI_assign_register
+    1237                            .dwattr $C$DW$47, DW_AT_name("A2")
+    1238                            .dwattr $C$DW$47, DW_AT_location[DW_OP_reg1]
+    1239                    
+    1240                    $C$DW$48        .dwtag  DW_TAG_TI_assign_register
+    1241                            .dwattr $C$DW$48, DW_AT_name("A3")
+    1242                            .dwattr $C$DW$48, DW_AT_location[DW_OP_reg2]
+    1243                    
+    1244                    $C$DW$49        .dwtag  DW_TAG_TI_assign_register
+    1245                            .dwattr $C$DW$49, DW_AT_name("A4")
+    1246                            .dwattr $C$DW$49, DW_AT_location[DW_OP_reg3]
+    1247                    
+    1248                    $C$DW$50        .dwtag  DW_TAG_TI_assign_register
+    1249                            .dwattr $C$DW$50, DW_AT_name("V1")
+    1250                            .dwattr $C$DW$50, DW_AT_location[DW_OP_reg4]
+    1251                    
+    1252                    $C$DW$51        .dwtag  DW_TAG_TI_assign_register
+    1253                            .dwattr $C$DW$51, DW_AT_name("V2")
+    1254                            .dwattr $C$DW$51, DW_AT_location[DW_OP_reg5]
+    1255                    
+    1256                    $C$DW$52        .dwtag  DW_TAG_TI_assign_register
+    1257                            .dwattr $C$DW$52, DW_AT_name("V3")
+    1258                            .dwattr $C$DW$52, DW_AT_location[DW_OP_reg6]
+    1259                    
+    1260                    $C$DW$53        .dwtag  DW_TAG_TI_assign_register
+    1261                            .dwattr $C$DW$53, DW_AT_name("V4")
+    1262                            .dwattr $C$DW$53, DW_AT_location[DW_OP_reg7]
+    1263                    
+    1264                    $C$DW$54        .dwtag  DW_TAG_TI_assign_register
+TI ARM Assembler PC v16.9.9 Sun Nov 25 16:40:46 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Stryd\AppData\Local\Temp\{91D5941F-1386-4733-9B40-8BD83D10D783} PAGE   24
+
+    1265                            .dwattr $C$DW$54, DW_AT_name("V5")
+    1266                            .dwattr $C$DW$54, DW_AT_location[DW_OP_reg8]
+    1267                    
+    1268                    $C$DW$55        .dwtag  DW_TAG_TI_assign_register
+    1269                            .dwattr $C$DW$55, DW_AT_name("V6")
+    1270                            .dwattr $C$DW$55, DW_AT_location[DW_OP_reg9]
+    1271                    
+    1272                    $C$DW$56        .dwtag  DW_TAG_TI_assign_register
+    1273                            .dwattr $C$DW$56, DW_AT_name("V7")
+    1274                            .dwattr $C$DW$56, DW_AT_location[DW_OP_reg10]
+    1275                    
+    1276                    $C$DW$57        .dwtag  DW_TAG_TI_assign_register
+    1277                            .dwattr $C$DW$57, DW_AT_name("V8")
+    1278                            .dwattr $C$DW$57, DW_AT_location[DW_OP_reg11]
+    1279                    
+    1280                    $C$DW$58        .dwtag  DW_TAG_TI_assign_register
+    1281                            .dwattr $C$DW$58, DW_AT_name("V9")
+    1282                            .dwattr $C$DW$58, DW_AT_location[DW_OP_reg12]
+    1283                    
+    1284                    $C$DW$59        .dwtag  DW_TAG_TI_assign_register
+    1285                            .dwattr $C$DW$59, DW_AT_name("SP")
+    1286                            .dwattr $C$DW$59, DW_AT_location[DW_OP_reg13]
+    1287                    
+    1288                    $C$DW$60        .dwtag  DW_TAG_TI_assign_register
+    1289                            .dwattr $C$DW$60, DW_AT_name("LR")
+    1290                            .dwattr $C$DW$60, DW_AT_location[DW_OP_reg14]
+    1291                    
+    1292                    $C$DW$61        .dwtag  DW_TAG_TI_assign_register
+    1293                            .dwattr $C$DW$61, DW_AT_name("PC")
+    1294                            .dwattr $C$DW$61, DW_AT_location[DW_OP_reg15]
+    1295                    
+    1296                    $C$DW$62        .dwtag  DW_TAG_TI_assign_register
+    1297                            .dwattr $C$DW$62, DW_AT_name("SR")
+    1298                            .dwattr $C$DW$62, DW_AT_location[DW_OP_reg17]
+    1299                    
+    1300                    $C$DW$63        .dwtag  DW_TAG_TI_assign_register
+    1301                            .dwattr $C$DW$63, DW_AT_name("AP")
+    1302                            .dwattr $C$DW$63, DW_AT_location[DW_OP_reg7]
+    1303                    
+    1304                            .dwendtag $C$DW$CU
+    1305                    
+
+--------------------------
+Thumb2 Statistics
+--------------------------
+Number of Thumb2 ins converted to Thumb = 0 (0%)
+Number of Thumb ins in input = 35 (92%)
+Number of Thumb2 ins encoded as Thumb2 = 3 (100%)
+Number of Thumb2 ins converted to 2 OPND Thumb = 1
+
+
+No Assembly Errors, No Assembly Warnings
